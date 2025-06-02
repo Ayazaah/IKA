@@ -1,0 +1,45 @@
+<div class="catalogue-container">
+    <h1>Catalogue des habitations</h1>
+    <div class="maisons-grid">
+      <div class="maison-card" *ngFor="let maison of maisons">
+  
+        <div class="carousel-container">
+          <button 
+            class="nav-btn" 
+            *ngIf="maison.imageUrls.length > 1" 
+            (click)="prevImage(maison)">
+            &#9664;
+          </button>
+        
+          <img [src]="getCurrentImage(maison)" [alt]="maison.nom" />
+        
+          <button 
+            class="nav-btn" 
+            *ngIf="maison.imageUrls.length > 1" 
+            (click)="nextImage(maison)">
+            &#9654;
+          </button>
+        </div>
+  
+        <h2>{{ maison.nom }}</h2>
+        <p class="prix">{{ maison.locationSemaine }} $ / semaine</p>
+  
+        <button class="details-btn" (click)="toggleDetails(maison)">
+          {{ maison.detailsVisible ? 'Fermer les détails' : 'Détails' }}
+        </button>
+  
+        <div *ngIf="maison.detailsVisible" class="details">
+          <p *ngIf="maison.achat > 0"><strong>Achat :</strong> {{ maison.achat }} $</p>
+          <p *ngIf="maison.achat === 0">Cette habitation n'est pas disponible à la <b>vente</b></p>
+          <p><strong>Capacité des armoires :</strong> {{ maison.capaciteArmoires }} Kg</p>
+          <p><strong>Capacité du coffre-fort :</strong> {{ maison.capaciteCoffre }} Kg</p>
+          <p *ngIf="maison.imageUrls.length > 1" class="image-name"><strong>Coloris :</strong> {{ getImageName(getCurrentImage(maison)) }}</p>
+        </div>
+  
+      </div>
+    </div>
+    <div>
+        <button (click)="onHome()" class="home-btn btn">Accueil</button>
+    </div>
+  </div>
+  

@@ -1,0 +1,14 @@
+<div class="catalogue-container">
+    <h1>Catalogue des entrepôts</h1>
+    <div class="card" *ngFor="let entrepot of entrepots">
+      <img [src]="entrepot.imageUrl" [alt]="entrepot.nom" />
+      <h2>{{ entrepot.nom }}</h2>
+      <p class="prix">{{ entrepot.prixLocation }} $ / semaine</p>
+      <p><strong>Capacité des armoires :</strong> {{ entrepot.capaciteArmoires | number:'1.0-0':'en' }} Kg</p>
+        <p><strong>Capacité du coffre-fort :</strong> {{ entrepot.capaciteCoffre }} Kg</p>
+    </div>
+    <div>
+        <button (click)="onHome()" class="home-btn btn">Accueil</button>
+    </div>
+  </div>
+  

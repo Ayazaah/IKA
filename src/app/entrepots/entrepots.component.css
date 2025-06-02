@@ -1,0 +1,68 @@
+  h1{
+    margin-bottom: 25px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  .home-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: white;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .home-btn:hover {
+    background-color: #333;
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  .btn{
+    margin-top: 20px;
+  }
+
+  .catalogue-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 30px;
+  }
+  
+  .card {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .prix {
+    font-weight: bold;
+    color: #50a360;
+    font-size: 1.4rem;
+  }
+  
