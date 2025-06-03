@@ -110,10 +110,9 @@
   }
   
   .details {
-    text-align: left;
     font-size: 0.9rem;
     border-top: 1px solid #ccc;
-    padding-top: 10px;
+    padding-top: 20px;
     margin-top: 10px;
     color: #333;
   }
