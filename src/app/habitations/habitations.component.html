@@ -1,5 +1,9 @@
+<nav class="navbar">
+  <button class="nav-home-btn" (click)="onHome()">Accueil</button>
+  <span class="catalogue-title">Catalogue des habitations</span>
+</nav>
+
 <div class="catalogue-container">
-    <h1>Catalogue des habitations</h1>
     <div class="maisons-grid">
       <div class="maison-card" *ngFor="let maison of maisons">
   
@@ -8,7 +12,7 @@
             class="nav-btn" 
             *ngIf="maison.imageUrls.length > 1" 
             (click)="prevImage(maison)">
-            &#9664;
+            &lt;
           </button>
         
           <img [src]="getCurrentImage(maison)" [alt]="maison.nom" />
@@ -17,29 +21,41 @@
             class="nav-btn" 
             *ngIf="maison.imageUrls.length > 1" 
             (click)="nextImage(maison)">
-            &#9654;
+            &gt;
           </button>
         </div>
   
-        <h2>{{ maison.nom }}</h2>
-        <p class="prix">{{ maison.locationSemaine }} $ / semaine</p>
+        <h2>{{ maison.nmVisible ? maison.nom + ' non meublée': maison.nom }}</h2>
+        <p class="prix">
+          {{ maison.nmVisible ? maison.locationNm + ' $ / semaine' : maison.locationSemaine + ' $ / semaine' }}
+        </p>
+
   
         <button class="details-btn" (click)="toggleDetails(maison)">
           {{ maison.detailsVisible ? 'Fermer les détails' : 'Détails' }}
         </button>
   
         <div *ngIf="maison.detailsVisible" class="details">
-          <p *ngIf="maison.achat > 0"><strong>Achat :</strong> {{ maison.achat }} $</p>
-          <p *ngIf="maison.achat === 0">Cette habitation n'est pas disponible à la <b>vente</b></p>
-          <p><strong>Capacité des armoires :</strong> {{ maison.capaciteArmoires }} Kg</p>
-          <p><strong>Capacité du coffre-fort :</strong> {{ maison.capaciteCoffre }} Kg</p>
-          <p *ngIf="maison.imageUrls.length > 1" class="image-name"><strong>Coloris :</strong> {{ getImageName(getCurrentImage(maison)) }}</p>
+          <ng-container *ngIf="!maison.nmVisible">
+            <p *ngIf="maison.achat > 0"><strong>Achat :</strong> {{ maison.achat }} $</p>
+            <p *ngIf="maison.achat === 0">Cette habitation n'est pas disponible à la <b>vente</b></p>
+            <p *ngIf="maison.capaciteArmoires > 0"><strong>Capacité des armoires :</strong> {{ maison.capaciteArmoires }} Kg</p>
+            <p *ngIf="maison.capaciteCoffre > 0"><strong>Capacité du coffre-fort :</strong> {{ maison.capaciteCoffre }} Kg</p>
+            <p *ngIf="maison.imageUrls.length > 1 && !maison.nm" class="image-name"><strong>Coloris :</strong> {{ getImageName(getCurrentImage(maison)) }}</p>
+          </ng-container>
+        
+          <ng-container *ngIf="maison.nmVisible">
+            <p><strong>Achat (Non meublée) :</strong> {{ maison.venteNm}} $</p>
+          </ng-container>
         </div>
-  
+        
+        <button 
+          *ngIf="maison.nm && maison.detailsVisible" 
+          class="nm-btn"
+          (click)="maison.nmVisible = !maison.nmVisible">
+          {{ maison.nmVisible ? 'Voir en version meublée' : 'Voir en version non meublée' }}
+        </button>
       </div>
-    </div>
-    <div>
-        <button (click)="onHome()" class="home-btn btn">Accueil</button>
     </div>
   </div>
   

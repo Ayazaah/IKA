@@ -12,7 +12,13 @@ interface Maison {
   achat: number;            
   capaciteArmoires: number; 
   capaciteCoffre: number;  
-  detailsVisible?: boolean; 
+  
+  detailsVisible?: boolean;
+  nmVisible?: boolean;
+
+  nm: boolean;
+  locationNm: number;
+  venteNm: number;
 }
 
 @Component({
@@ -32,7 +38,11 @@ export class HabitationsComponent {
       achat: 0,
       capaciteArmoires: 200,
       capaciteCoffre: 100,
-      detailsVisible: false
+      detailsVisible: false,
+      nmVisible: false,
+      nm: false,
+      locationNm: 0,
+      venteNm: 0
     },
     {
       id: 2,
@@ -42,7 +52,11 @@ export class HabitationsComponent {
       achat: 40000,
       capaciteArmoires: 200,
       capaciteCoffre: 100,
-      detailsVisible: false
+      detailsVisible: false,
+      nmVisible: false,
+      nm: false,
+      locationNm: 0,
+      venteNm: 0
     },
     {
       id: 3,
@@ -52,7 +66,11 @@ export class HabitationsComponent {
       achat: 60000,
       capaciteArmoires: 300,
       capaciteCoffre: 100,
-      detailsVisible: false
+      detailsVisible: false,
+      nmVisible: false,
+      nm: false,
+      locationNm: 0,
+      venteNm: 0
     },
     {
       id: 4,
@@ -62,7 +80,11 @@ export class HabitationsComponent {
       achat: 80000,
       capaciteArmoires: 200,
       capaciteCoffre: 100,
-      detailsVisible: false
+      detailsVisible: false,
+      nmVisible: false,
+      nm: false,
+      locationNm: 0,
+      venteNm: 0
     },
     {
       id: 5,
@@ -72,7 +94,11 @@ export class HabitationsComponent {
       achat: 100000,
       capaciteArmoires: 200,
       capaciteCoffre: 100,
-      detailsVisible: false
+      detailsVisible: false,
+      nmVisible: false,
+      nm: false,
+      locationNm: 0,
+      venteNm: 0
     },
     {
       id: 6,
@@ -82,7 +108,11 @@ export class HabitationsComponent {
       achat: 120000,
       capaciteArmoires: 200,
       capaciteCoffre: 100,
-      detailsVisible: false
+      detailsVisible: false,
+      nmVisible: false,
+      nm: false,
+      locationNm: 0,
+      venteNm: 0
     },
     {
       id: 7,
@@ -92,7 +122,81 @@ export class HabitationsComponent {
       achat: 160000,
       capaciteArmoires: 300,
       capaciteCoffre: 100,
-      detailsVisible: false
+      detailsVisible: false,
+      nmVisible: false,
+      nm: false,
+      locationNm: 0,
+      venteNm: 0
+    },
+    {
+      id: 8,
+      nom: 'Appartement Cosy',
+      imageUrls: ['/assets/appartCosy.png'],
+      locationSemaine: 1500,
+      achat: 80000,
+      capaciteArmoires: 0,
+      capaciteCoffre: 0,
+      detailsVisible: false,
+      nmVisible: false,
+      nm: true,
+      locationNm: 1000,
+      venteNm: 70000
+    },
+    {
+      id: 9,
+      nom: 'Appartement Contemporain',
+      imageUrls: ['/assets/appartContemporain.png'],
+      locationSemaine: 1500,
+      achat: 80000,
+      capaciteArmoires: 0,
+      capaciteCoffre: 0,
+      detailsVisible: false,
+      nmVisible: false,
+      nm: true,
+      locationNm: 1000,
+      venteNm: 70000
+    },
+    {
+      id: 10,
+      nom: 'Maison Contemporaine',
+      imageUrls: ['/assets/contemporaine1.png','/assets/contemporaine2.png'],
+      locationSemaine: 2000,
+      achat: 100000,
+      capaciteArmoires: 0,
+      capaciteCoffre: 0,
+      detailsVisible: false,
+      nmVisible: false,
+      nm: true,
+      locationNm: 1500,
+      venteNm: 90000
+    },
+    {
+      id: 11,
+      nom: 'Maison Design',
+      imageUrls: ['/assets/design1.png','/assets/design2.png'],
+      locationSemaine: 2500,
+      achat: 120000,
+      capaciteArmoires: 0,
+      capaciteCoffre: 0,
+      detailsVisible: false,
+      nmVisible: false,
+      nm: true,
+      locationNm: 2000,
+      venteNm: 110000
+    },
+    {
+      id: 12,
+      nom: 'Maison Montagne',
+      imageUrls: ['/assets/montagne1.png','/assets/montagne2.png'],
+      locationSemaine: 4000,
+      achat: 160000,
+      capaciteArmoires: 0,
+      capaciteCoffre: 0,
+      detailsVisible: false,
+      nmVisible: false,
+      nm: true,
+      locationNm: 3500,
+      venteNm: 150000
     }
   ];
 

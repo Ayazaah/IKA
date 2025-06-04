@@ -1,9 +1,41 @@
-  h1{
-    margin-bottom: 25px;
-    margin-top: 10px;
-    font-weight: bold;
+  /*tout ce qui touche à la navbar*/
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 0 0 8px 8px;
   }
 
+  .nav-home-btn {
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .nav-home-btn:hover {
+    background-color: #333;
+    color: white;
+  }
+
+  .catalogue-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+  }
+/**/
   .home-btn {
     padding: 12px 24px;
     border: none;
@@ -53,6 +85,7 @@
     box-shadow: 0 8px 15px rgba(0,0,0,0.2);
   }
   
+  /*Conteneur des images*/
   .carousel-container {
     display: flex;
     align-items: center;
@@ -69,6 +102,14 @@
     user-select: none;
   }
   
+  .prix {
+    color: #50a360;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin: 8px 0;
+  }
+
+  /*Boutons : flèches pour faire défiler les images*/
   .nav-btn {
     background-color: #3e814e;
     border: none;
@@ -86,14 +127,9 @@
     background-color: #336943;
   }
   
-  .prix {
-    color: #50a360;
-    font-weight: bold;
-    font-size: 1.4rem;
-    margin: 8px 0;
-  }
-  
+  /*Bouton : détails*/
   .details-btn {
+    font-family: 'Poppins', sans-serif;
     background-color: #50a360;
     border: none;
     color: white;
@@ -110,13 +146,33 @@
   }
   
   .details {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     border-top: 1px solid #ccc;
     padding-top: 20px;
     margin-top: 10px;
     color: #333;
   }
+
+  /*Bouton : non meublé*/
+  .nm-btn {
+    background-color: #a37950;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+    font-family: 'Poppins', sans-serif;
+  }
   
+  .nm-btn:hover {
+    background-color: #bb6e21;
+  }  
+  
+  /*Responsive*/
   @media (max-width: 768px) {
     .maisons-grid {
       grid-template-columns: 1fr;

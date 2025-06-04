@@ -1,14 +1,15 @@
+<nav class="navbar">
+  <button class="nav-home-btn" (click)="onHome()">Accueil</button>
+  <span class="catalogue-title">Catalogue des garages</span>
+</nav>
+
 <div class="catalogue-container">
-    <h1>Catalogue des garages</h1>
     <div class="garages-grid">
       <div class="garage-card" *ngFor="let garage of garages">
         <img [src]="garage.imageUrl" [alt]="garage.nom" />
         <h2>{{ garage.nom }}</h2>
         <p class="prix">{{ garage.prixLocation }} $ / semaine</p>
       </div>
-    </div>
-    <div>
-        <button (click)="onHome()" class="home-btn btn">Accueil</button>
     </div>
   </div>
   
