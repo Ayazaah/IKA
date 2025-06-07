@@ -104,7 +104,7 @@ export class HabitationsComponent {
       id: 6,
       nom: 'Villa Moderne',
       imageUrls: ['/assets/Monochrome.png', '/assets/Vibrant.png', '/assets/Séduisant.png', '/assets/Moody.png', '/assets/Régal.png', '/assets/Aqua.png', '/assets/Pointu.png'],
-      locationSemaine: 2500,
+      locationSemaine: 3000,
       achat: 120000,
       capaciteArmoires: 200,
       capaciteCoffre: 100,
@@ -167,7 +167,7 @@ export class HabitationsComponent {
       detailsVisible: false,
       nmVisible: false,
       nm: true,
-      locationNm: 1500,
+      locationNm: 2500,
       venteNm: 90000
     },
     {
@@ -181,7 +181,7 @@ export class HabitationsComponent {
       detailsVisible: false,
       nmVisible: false,
       nm: true,
-      locationNm: 2000,
+      locationNm: 3000,
       venteNm: 110000
     },
     {
